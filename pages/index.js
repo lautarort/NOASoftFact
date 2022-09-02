@@ -1,5 +1,6 @@
 import React from 'react'
-import { Box, Text, Flex, Grid } from "@chakra-ui/react"
+import { Box, Text, Flex, Grid, Image, Link } from "@chakra-ui/react"
+import ProductSimple from '../components/card'
 
 export default function index() {
   const outerBoxStyles = {
@@ -26,20 +27,21 @@ export default function index() {
       <Box
         // display="flex" alignItems="center"
         // align="flex" justify="center"
+        // bg='red.200'
         border='1px' borderColor='gray.200'
         display="grid" gridGap={2} gridAutoFlow="row dense"
-        w="100%" h="300px" bgGradient="radial(gray.300, yellow.400, pink.200)"
+        w="100%" h="300px" bgGradient="radial(gray.300, gray.400, gray.200)"
       >
-        <Text ml="25px"
-
-          bgGradient="linear(to-l, #7928CA, #FF0080)"
+        <Text
+          ml="25px"
+          bgGradient="linear(to-l, #00A3C4, #065666)"
           bgClip="text"
           // fontSize="6xl"
           // fontSize="md"
           fontSize={64}
           fontWeight="extrabold"
           textAlign={['left', 'center']}
-          textShadow='1px 1px #ff0000' m='6'
+        // textShadow='1px 1px #ff0000' m='6'
         >
           NOASofFact
         </Text>
@@ -62,6 +64,50 @@ export default function index() {
           Box with Backdrop Contrast
         </Box>
       </Box>
+      {/* <Box>
+        <Box bg='red.200' w={[300, 400, 500]}>
+          This is a box
+        </Box>
+      </Box> */}
+
+      <Box>
+        <Box p={4} display={{ md: 'flex' }}>
+          <Box flexShrink={0}>
+            <Image
+              borderRadius='lg'
+              width={{ md: 40 }}
+              src='https://bit.ly/2jYM25F'
+              alt='Woman paying for a purchase'
+            />
+          </Box>
+          <Box mt={{ base: 4, md: 0 }} ml={{ md: 6 }}>
+            <Text
+              fontWeight='bold'
+              textTransform='uppercase'
+              fontSize='sm'
+              letterSpacing='wide'
+              color='teal.600'
+            >
+              Marketing
+            </Text>
+            <Link
+              mt={1}
+              display='block'
+              fontSize='lg'
+              lineHeight='normal'
+              fontWeight='semibold'
+              href='#'
+            >
+              Finding customers for your new business
+            </Link>
+            <Text mt={2} color='gray.500'>
+              Getting a new business off the ground is a lot of hard work. Here are five
+              ideas you can use to find your first customers.
+            </Text>
+          </Box>
+        </Box>
+      </Box>
+      <ProductSimple />
     </Flex>
   )
 
