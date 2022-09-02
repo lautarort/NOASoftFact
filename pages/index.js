@@ -109,6 +109,7 @@ export default function index() {
         <Pricing />
       </Box>
 
+
     </Flex>
   )
 
