@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Text, Flex, Grid, Image, Link } from "@chakra-ui/react"
 import ProductSimple from '../components/card'
+import Pricing from '../components/payment'
 
 export default function index() {
   const outerBoxStyles = {
@@ -64,12 +65,6 @@ export default function index() {
           Box with Backdrop Contrast
         </Box>
       </Box>
-      {/* <Box>
-        <Box bg='red.200' w={[300, 400, 500]}>
-          This is a box
-        </Box>
-      </Box> */}
-
       <Box>
         <Box p={4} display={{ md: 'flex' }}>
           <Box flexShrink={0}>
@@ -107,7 +102,13 @@ export default function index() {
           </Box>
         </Box>
       </Box>
-      <ProductSimple />
+      <Box p={4} display={{ md: 'flex' }}>
+        <ProductSimple />
+      </Box>
+      <Box p={4} display={{ md: 'flex' }}>
+        <Pricing />
+      </Box>
+
     </Flex>
   )
 
